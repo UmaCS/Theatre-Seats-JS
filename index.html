@@ -10,11 +10,12 @@
   <body>
     <div class="menu item">
       <label for="movies">Pick a movie:</label>
-      <select id="movies" name="movies">
-        <option value="Avengers">Avengers($10)</option>
-        <option value="Joker">Joker($11)</option>
-        <option value="Blade">Blade($9)</option>
-        <option value="Bloodshot">Bloodshot($7)</option>
+      <select id="movies" onchange="getSelectedMovie()">
+        <option value="">--Choose a movie--</option>
+        <option value="10">Avengers($10)</option>
+        <option value="11">Joker($11)</option>
+        <option value="9">Blade($9)</option>
+        <option value="7">King Leo($7)</option>
       </select>
     </div>
 
@@ -40,11 +41,11 @@
           <div class="seat available"></div>
           <div class="seat available"></div>
           <div class="seat available"></div>
-          <div class="seat available"></div>
+          <div class="seat occupied"></div>
           <div class="seat available"></div>
         </div>
         <div class="column item">
-          <div class="seat available"></div>
+          <div class="seat occupied"></div>
           <div class="seat available"></div>
           <div class="seat available"></div>
           <div class="seat available"></div>
@@ -66,16 +67,16 @@
           <div class="seat available"></div>
           <div class="seat available"></div>
           <div class="seat available"></div>
-          <div class="seat available"></div>
-          <div class="seat available"></div>
+          <div class="seat occupied"></div>
+          <div class="seat occupied"></div>
         </div>
         <div class="column item">
           <div class="seat available"></div>
           <div class="seat available"></div>
           <div class="seat available"></div>
           <div class="seat available"></div>
-          <div class="seat available"></div>
-          <div class="seat available"></div>
+          <div class="seat occupied"></div>
+          <div class="seat occupied"></div>
         </div>
         <div class="column item">
           <div class="seat available"></div>
@@ -92,7 +93,7 @@
           <div class="seat available"></div>
           <div class="seat available"></div>
           <div class="seat available"></div>
-          <div class="seat available"></div>
+          <div class="seat occupied"></div>
           <div class="seat available"></div>
         </div>
         <div class="column item">
@@ -100,16 +101,16 @@
           <div class="seat available"></div>
           <div class="seat available"></div>
           <div class="seat available"></div>
-          <div class="seat available"></div>
+          <div class="seat occupied"></div>
           <div class="seat available"></div>
         </div>
       </div>
     </div>
 
     <div class="summary item">
-      <h1>You have selected <span>0</span> for a price of $<span>0</span></h1>
+      <h1>You have selected <span id="selected-seats">0</span> for a price of $<span id="total-price">0</span></h1>
     </div>
-
+    <script src="app.js" charset="utf-8"></script>
   </body>
 
 </html>

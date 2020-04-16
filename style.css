@@ -7,7 +7,7 @@ body {
 }
 
 .item {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: 5px;
   margin: 15px;
 }
@@ -23,6 +23,7 @@ body {
   font-size: .5em;
   width: 200px;
   padding: 2em;
+  cursor: pointer;
 }
 
 .options {
@@ -33,7 +34,9 @@ body {
 
 ul {
   display: flex;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  flex: 1;
+  justify-content: center;
 }
 
 .screen {
@@ -68,7 +71,8 @@ ul {
 /* ##################
 Seat Options
  ################## */
-.seat {
+.seat,
+.option-seat {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   width: 20px;
@@ -79,21 +83,39 @@ Seat Options
 .selected:hover,
 .available:hover {
   padding: 2px;
+  cursor: pointer;
+  /* margin: -.5px; */
 }
 
-.available {
+.available,
+.one {
   background: #000;
 }
 
-.selected {
-  background: rgb(54, 163, 170)
+.selected,
+.two {
+  background: rgb(54, 163, 170);
 }
 
-.occupied {
-  background: rgb(214, 221, 220)
+.occupied,
+.three {
+  background: rgb(214, 221, 220);
 }
 
+#counter,
+#total-price {
+  color: rgb(54, 163, 170);
+}
+
+/* ##################
+Direct Tags
+ ################## */
 li {
   list-style: none;
   margin: 5px;
+}
+
+label {
+  padding: 5px;
+  margin-right: 25px;
 }
